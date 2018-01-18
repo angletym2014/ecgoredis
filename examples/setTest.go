@@ -1,8 +1,9 @@
 package main
 
 import (
-	"ecgoredis"
 	"fmt"
+
+	"github.com/angletym2014/ecgoredis"
 )
 
 func main() {
