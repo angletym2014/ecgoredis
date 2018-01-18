@@ -1,0 +1,36 @@
+[corp]
+	[corp.master]
+		addr = "127.0.0.1:6379"
+		password = ""
+		db = 0
+		timeout = 3
+
+	[corp.slave]
+		[corp.slave.one]
+			addr = "127.0.0.1:6379"
+			password = ""
+			db = 0
+			timeout = 3
+		[corp.slave.two]
+			addr = "127.0.0.1:6379"
+			password = ""
+			db = 1
+			timeout = 3
+[crm]
+	[crm.master]
+		addr = "127.0.0.1:6379"
+		password = ""
+		db = 0
+		timeout = 3
+
+	[crm.slave]
+		[crm.slave.one]
+			addr = "127.0.0.1:6379"
+			password = ""
+			db = 0
+			timeout = 3
+		[crm.slave.two]
+			addr = "127.0.0.1:6379"
+			password = ""
+			db = 1
+			timeout = 3
