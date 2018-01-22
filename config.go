@@ -14,6 +14,7 @@ type Ecredisconfig struct {
 
 //GetRedisConfig 通过配置文件获取相关信息
 func GetRedisConfig(name string) *Ecredisconfig {
+	//ecredis  是包中conf目录下 ecredis.toml 文件的名字
 	x := conf.C("ecredis")
 	var tmpconfig = &Ecredisconfig{
 		addr:     x.Get(name + ".addr").String(),

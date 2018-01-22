@@ -7,7 +7,7 @@ import (
 )
 
 //GetRedisClient 获取go-redis 客户端实例
-func GetRedisClient(name string) (*redis.Client, error) {
+func GetRedisClient(name string) *redis.Client {
 	var redisOption = GetRedisConfig(name)
 	//通过redis配置参数 获取redis 相关参数
 	client := redis.NewClient(&redis.Options{
@@ -19,8 +19,8 @@ func GetRedisClient(name string) (*redis.Client, error) {
 
 	_, pongErr := client.Ping().Result()
 	if pongErr != nil {
-		return client, pongErr
+		panic(pongErr)
 	}
 
-	return client, nil
+	return client
 }
